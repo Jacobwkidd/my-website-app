@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from './core/navbar/navbar.component';
-import { HomeComponent } from './features/home/home.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { FullstackComponent } from './features/fullstack/fullstack.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HomeComponent, FooterComponent, FullstackComponent],
+  imports: [RouterModule, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

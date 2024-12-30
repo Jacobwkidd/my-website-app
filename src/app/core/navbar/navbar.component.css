@@ -9,4 +9,16 @@
   .group a:hover {
     text-decoration: underline;
   }
+  nav a {
+    display: inline-block; /* Ensures links are treated as clickable elements */
+    text-decoration: none; /* Removes underlines from links */
+    padding: 0.5rem 1rem; /* Adds spacing around the links */
+    color: #ffffff; /* White text for links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+  }
+  
+  nav a:hover {
+    background-color: #374151; /* Dark gray on hover */
+    color: #ffffff; /* Ensure text remains white */
+  }
   
