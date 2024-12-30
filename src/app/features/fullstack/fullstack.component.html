@@ -1,2 +1,11 @@
-<h1>It works</h1>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
+    <app-card
+      *ngFor="let project of projects"
+      [title]="project.title"
+      [description]="project.description"
+      [imageUrl]="project.imageUrl"
+      [tags]="project.tags"
+    >
+    </app-card>
+  </div>
   
