@@ -23,5 +23,17 @@ export class FullstackComponent {
       imageUrl: 'https://via.placeholder.com/150',
       tags: ['Node.js', 'Express', 'MongoDB'],
     },
+    {
+      title: 'Project 1',
+      description: 'This is a description of Project 1.',
+      imageUrl: 'https://via.placeholder.com/150',
+      tags: ['Angular', 'TypeScript', 'TailwindCSS'],
+    },
+    {
+      title: 'Project 2',
+      description: 'This is a description of Project 2.',
+      imageUrl: 'https://via.placeholder.com/150',
+      tags: ['Node.js', 'Express', 'MongoDB'],
+    },
   ];
 }

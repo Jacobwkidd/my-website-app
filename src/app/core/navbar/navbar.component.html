@@ -1,31 +1,47 @@
-<header class="bg-gray-800">
-  <nav class="container mx-auto px-6 py-4">
+<header class="bg-gray-800 m-0 p-0">
+  <nav class="container mx-auto px-6 py-4 m-0">
+    
     <div class="flex items-center justify-between">
+      <!-- Logo -->
       <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105">
         <span class="text-3xl font-extrabold text-white italic tracking-tighter">j</span>
       </div>
-      <div class="hidden md:flex space-x-6">
-        <div class="group relative">
-          <a routerLink="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-            Home
-          </a>
-        </div>
-        <div class="group relative">
-          <a routerLink="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-            About
-          </a>
-        </div>
-        <div class="group relative">
-          <a routerLink="/fullstack" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-            My Projects
-          </a>
-        </div>
-        <div class="group relative">
-          <a routerLink="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-            Contact
-          </a>
-        </div>
+    
+
+    <!-- Navigation Links -->
+    <div
+      [ngClass]="{
+        'hidden': !isMenuOpen,
+        'block py-4': isMenuOpen
+      }"
+      class="md:flex md:space-x-6 md:static absolute top-16 left-0 w-full bg-gray-800 md:bg-transparent md:shadow-none shadow-lg"
+    >
+      <div class="group relative">
+        <a routerLink="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          About
+        </a>
+      </div>
+      <div class="group relative">
+        <a routerLink="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          Experience
+        </a>
+      </div>
+      <div class="group relative">
+        <a routerLink="/fullstack" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          Projects
+        </a>
+      </div>
+      <div class="group relative">
+        <a routerLink="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          Contact
+        </a>
       </div>
     </div>
+  </div>
   </nav>
 </header>
+
+<!-- Content -->
+<div [style.marginTop]="isMenuOpen ? '150px' : '0'">
+  <router-outlet></router-outlet>
+</div>
