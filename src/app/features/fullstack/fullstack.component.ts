@@ -12,28 +12,32 @@ import { CommonModule } from '@angular/common';
 export class FullstackComponent {
   projects = [
     {
-      title: 'Project 1',
-      description: 'This is a description of Project 1.',
-      imageUrl: 'https://via.placeholder.com/150',
-      tags: ['Angular', 'TypeScript', 'TailwindCSS'],
+      title: 'HR and Product Management System',
+      description: 'Employees can punch in and out while calculating the time with the hourly wage.',
+      tags: ['React', 'NestJS', 'Tailwind', 'MySQL', 'PhpMyAdmin'],
+      image: 'https://via.placeholder.com/300',
+      github: 'https://github.com/Jacobwkidd',
     },
     {
-      title: 'Project 2',
-      description: 'This is a description of Project 2.',
-      imageUrl: 'https://via.placeholder.com/150',
-      tags: ['Node.js', 'Express', 'MongoDB'],
+      title: 'WordGame',
+      description: 'Used observables.',
+      tags: ['C#', 'TypeScript', 'Tailwind', 'CSS', 'JSON'],
+      image: 'https://via.placeholder.com/300', // No image provided
+      github: 'https://github.com/Jacobwkidd',
     },
     {
-      title: 'Project 1',
-      description: 'This is a description of Project 1.',
-      imageUrl: 'https://via.placeholder.com/150',
-      tags: ['Angular', 'TypeScript', 'TailwindCSS'],
+      title: 'HR and Product Management System',
+      description: 'Employees can punch in and out while calculating the time with the hourly wage.',
+      tags: ['React', 'NestJS', 'Tailwind', 'MySQL', 'PhpMyAdmin'],
+      image: 'https://via.placeholder.com/300',
+      github: 'https://github.com/Jacobwkidd',
     },
     {
-      title: 'Project 2',
-      description: 'This is a description of Project 2.',
-      imageUrl: 'https://via.placeholder.com/150',
-      tags: ['Node.js', 'Express', 'MongoDB'],
+      title: 'WordGame',
+      description: 'Used observables.',
+      tags: ['C#', 'TypeScript', 'Tailwind', 'CSS', 'JSON'],
+      image: 'https://via.placeholder.com/300', // No image provided
+      github: 'https://github.com/Jacobwkidd',
     },
   ];
 }

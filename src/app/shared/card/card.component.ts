@@ -9,8 +9,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
-  @Input() title!: string;       // Title of the card
-  @Input() description!: string; // Description or content
-  @Input() imageUrl!: string;    // Image URL for the card
-  @Input() tags!: string[];      // Tags or categories
+  @Input() title!: string; // Title of the card
+  @Input() description!: string; // Description of the card
+  @Input() tags!: string[]; // Tags array
+  @Input() image: string | null = null; // Optional image URL
+  @Input() github!: string; // Default GitHub link
 }
