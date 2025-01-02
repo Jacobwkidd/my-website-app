@@ -1,0 +1,5 @@
+                <div
+                    class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+                >
+                    <span class="text-3xl font-extrabold text-white italic tracking-tighter">j</span>
+                </div>

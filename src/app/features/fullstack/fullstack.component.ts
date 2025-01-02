@@ -17,13 +17,17 @@ export class FullstackComponent {
       tags: ['React', 'NestJS', 'Tailwind', 'MySQL', 'PhpMyAdmin'],
       image: 'https://via.placeholder.com/300',
       github: 'https://github.com/Jacobwkidd',
+      detailedDescription:
+      'This project includes features for managing employee punch-ins and outs, hourly wage calculation, and seamless integration with payroll systems.',
     },
     {
       title: 'WordGame',
       description: 'Used observables.',
       tags: ['C#', 'TypeScript', 'Tailwind', 'CSS', 'JSON'],
-      image: 'https://via.placeholder.com/300', // No image provided
+      image: 'https://via.placeholder.com/300',
       github: 'https://github.com/Jacobwkidd',
+      detailedDescription:
+      'This project includes features for managing employee punch-ins and outs, hourly wage calculation, and seamless integration with payroll systems.',
     },
     {
       title: 'HR and Product Management System',
@@ -31,13 +35,17 @@ export class FullstackComponent {
       tags: ['React', 'NestJS', 'Tailwind', 'MySQL', 'PhpMyAdmin'],
       image: 'https://via.placeholder.com/300',
       github: 'https://github.com/Jacobwkidd',
+      detailedDescription:
+      'This project includes features for managing employee punch-ins and outs, hourly wage calculation, and seamless integration with payroll systems.',
     },
     {
       title: 'WordGame',
       description: 'Used observables.',
       tags: ['C#', 'TypeScript', 'Tailwind', 'CSS', 'JSON'],
-      image: 'https://via.placeholder.com/300', // No image provided
-      github: 'https://github.com/Jacobwkidd',
+      image: 'https://via.placeholder.com/300',
+      github: 'https://github.com/Jacobwkidd', 
+      detailedDescription:
+      'This project includes features for managing employee punch-ins and outs, hourly wage calculation, and seamless integration with payroll systems.',
     },
   ];
 }

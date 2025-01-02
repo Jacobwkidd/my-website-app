@@ -14,4 +14,15 @@ export class CardComponent {
   @Input() tags!: string[]; // Tags array
   @Input() image: string | null = null; // Optional image URL
   @Input() github!: string; // Default GitHub link
+  @Input() detailedDescription!: string;
+
+  isModalOpen = false;
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
 }
