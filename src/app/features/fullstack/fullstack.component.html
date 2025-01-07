@@ -3,6 +3,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <app-card
       *ngFor="let project of projects"
+      class="p-4"
       [title]="project.title"
       [description]="project.description"
       [tags]="project.tags"
@@ -12,3 +13,4 @@
     ></app-card>
   </div>
 </div>
+
