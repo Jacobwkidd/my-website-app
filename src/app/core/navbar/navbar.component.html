@@ -1,54 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Navbar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Responsive Navbar</title>
 </head>
 <body>
-    <header class="bg-gray-800">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <a href="/" class="block">
-                    <div
-                        class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-transform duration-500 ease-out cursor-pointer transform hover:scale-125"
-                    >
-                        <span class="text-3xl font-extrabold text-white italic tracking-tighter">j</span>
-                    </div>
-                </a>
+  <header class="bg-gray-800">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="block">
+          <div
+            class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-transform duration-500 ease-out cursor-pointer transform hover:scale-125"
+          >
+            <span class="text-3xl font-extrabold text-white italic tracking-tighter">j</span>
+          </div>
+        </a>
 
-                <!-- Navigation Links -->
-                <div class="hidden md:flex space-x-6">
-                    <div class="group relative">
-                        <a
-                            routerLink="/"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                        >Home</a>
-                        
-                    </div>
-                    <div class="group relative">
-                        <a
-                            routerLink="/experience"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                        >Experience</a>
-                    </div>
-                    <div class="group relative">
-                        <a
-                            routerLink="/fullstack"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                        >Projects</a>
-                    </div>
-                    <div class="group relative">
-                        <a
-                            routerLink="/contact"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                        >Contact</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+        <!-- Desktop Navigation (Hidden on Mobile) -->
+        <div class="hidden md:flex space-x-6">
+          <div class="group relative">
+            <a
+              routerLink="/"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >Home</a>
+          </div>
+          <div class="group relative">
+            <a
+              routerLink="/experience"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >Experience</a>
+          </div>
+          <div class="group relative">
+            <a
+              routerLink="/fullstack"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >Projects</a>
+          </div>
+          <div class="group relative">
+            <a
+              routerLink="/contact"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >Contact</a>
+          </div>
+        </div>
+
+<!-- Hamburger Menu (Visible on Mobile Only) -->
+<button
+  class="block md:hidden p-2 rounded-md bg-gray-700 text-gray-300 hover:text-white hover:bg-gray-600 focus:outline-none"
+  (click)="toggleMenu()"
+  aria-label="Toggle navigation"
+>
+  <div class="space-y-1">
+    <!-- Top Line -->
+    <span
+      class="block w-6 h-0.5 bg-white transition-transform duration-300"
+      [ngClass]="{ 'rotate-45 translate-y-2': isMenuOpen }"
+    ></span>
+    <!-- Middle Line -->
+    <span
+      class="block w-6 h-0.5 bg-white transition-opacity duration-300"
+      [ngClass]="{ 'opacity-0': isMenuOpen }"
+    ></span>
+    <!-- Bottom Line -->
+    <span
+      class="block w-6 h-0.5 bg-white transition-transform duration-300"
+      [ngClass]="{ '-rotate-45 -translate-y-1': isMenuOpen }"
+    ></span>
+  </div>
+</button>
+      </div>
+             <!-- Mobile Menu -->
+        <div
+            class="md:hidden bg-gray-800 text-gray-300 px-4 py-3 space-y-2"
+            [ngClass]="{ 'hidden': !isMenuOpen, 'block': isMenuOpen }"
+            >
+            <a routerLink="/" class="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white">Home</a>
+            <a routerLink="/experience" class="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white">Experience</a>
+            <a routerLink="/fullstack" class="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white">Projects</a>
+            <a routerLink="/contact" class="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white">Contact</a>
+        </div>
+    </nav>
+  </header>
 </body>
 </html>
