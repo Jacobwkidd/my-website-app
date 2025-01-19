@@ -20,6 +20,15 @@ export class FullstackComponent {
       detailedDescription: `A responsive web platform built with Angular and styled using Tailwind CSS, enabling users to perform CRUD operations on phone data through seamless API communication, two-way data binding, and a mock database for efficient management.`,
     },
     {
+      title: 'Stock Market',
+      description: 'The Stock Market Application is a full-stack web platform built with Angular and NestJS, designed to provide users with real-time stock market data. It features seamless API integration, dynamic data handling, and a clean, responsive user interface. This project highlights robust data fetching, modular design, and efficient backend communication.',
+      tags: ['Angular', 'Nestjs', 'SQL'],
+      image: 'https://via.placeholder.com/300',
+      github: 'https://github.com/Jacobwkidd/WPwithDotnet/tree/main/UserLoginApp',
+      detailedDescription:
+      'This project includes features for managing employee punch-ins and outs, hourly wage calculation, and seamless integration with payroll systems.',
+    },
+    {
       title: 'HR and Product Management System',
       description: 'Employees can punch in and out while calculating the time with the hourly wage.',
       tags: ['React', 'NestJS', 'Tailwind', 'MySQL', 'PhpMyAdmin'],
