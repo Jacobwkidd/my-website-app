@@ -9,20 +9,30 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
-  @Input() title!: string; // Title of the card
-  @Input() description!: string; // Description of the card
-  @Input() tags!: string[]; // Tags array
-  @Input() image: string | null = null; // Optional image URL
-  @Input() github!: string; // Default GitHub link
+  @Input() title!: string;
+  @Input() tags: string[] = [];
+  @Input() image!: string;
+  @Input() github!: string;
+  @Input() description?: string;
   @Input() detailedDescription!: string;
 
   isModalOpen = false;
 
+  // Function to open modal
   openModal() {
     this.isModalOpen = true;
   }
 
+  // Function to close modal
   closeModal() {
     this.isModalOpen = false;
+  }
+
+  // Automatically generate a short description if `description` is not provided
+  getShortDescription(): string {
+    if (this.description) {
+      return this.description;
+    }
+    return this.detailedDescription.split('. ')[0] + '.';
   }
 }
