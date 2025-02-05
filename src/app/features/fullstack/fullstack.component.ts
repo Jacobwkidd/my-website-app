@@ -15,7 +15,7 @@ export class FullstackComponent {
       title: 'Phone Store',
       tags: ['Angular', 'TypeScript', 'Tailwind', 'CSS', 'JSON'],
       image: 'https://via.placeholder.com/300',
-      github: 'https://github.com/your-repo',
+      github: 'https://github.com/Jacobwkidd/phone-store.git',
       detailedDescription: `A responsive web platform built with Angular and styled using Tailwind CSS, enabling users to perform CRUD operations on phone data through seamless API communication, two-way data binding, and a mock database for efficient management.`,
     },
     {
@@ -30,7 +30,7 @@ export class FullstackComponent {
       title: 'HR and Product Management System',
       tags: ['React', 'NestJS', 'Tailwind', 'MySQL', 'PhpMyAdmin'],
       image: 'https://via.placeholder.com/300',
-      github: 'https://github.com/Jacobwkidd',
+      github: 'https://github.com/Jacobwkidd/inventory-system.git',
       detailedDescription:
       'This project includes features for managing employee punch-ins and outs, hourly wage calculation, and seamless integration with payroll systems.',
     },
@@ -38,7 +38,7 @@ export class FullstackComponent {
       title: 'WordGame',
       tags: ['C#', 'TypeScript', 'Tailwind', 'CSS', 'JSON'],
       image: 'https://via.placeholder.com/300',
-      github: 'https://github.com/Jacobwkidd',
+      github: 'https://github.com/Jacobwkidd/WordGame',
       detailedDescription:
       'This project includes features for managing employee punch-ins and outs, hourly wage calculation, and seamless integration with payroll systems.',
     },
@@ -68,6 +68,6 @@ export class FullstackComponent {
   ];
 
   generateShortDescription(detailedDescription: string): string {
-    return detailedDescription.split('.').slice(0, 1).join('.') + '.';
+    return detailedDescription.split('.').slice(0, 1).join('.') + '...';
   }
 }
