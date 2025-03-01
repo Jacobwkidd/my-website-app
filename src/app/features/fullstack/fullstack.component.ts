@@ -20,7 +20,7 @@ export class FullstackComponent {
     },
     {
       title: 'Stock Market',
-      tags: ['Angular', 'Nestjs', 'SQL'],
+      tags: ['Angular', 'Nestjs', 'SQL', 'PostgreSQL'],
       image: 'https://via.placeholder.com/300',
       github: 'https://github.com/Jacobwkidd/WPwithDotnet/tree/main/UserLoginApp',
       detailedDescription:
