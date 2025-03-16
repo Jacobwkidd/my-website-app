@@ -1,0 +1,14 @@
+<div class="w-full overflow-hidden bg-gray-100 py-4">
+    <div class="flex items-center space-x-8 animate-scroll">
+      <!-- First Set of Logos -->
+      <ng-container *ngFor="let logo of logos">
+        <img [src]="logo.src" [alt]="logo.name" class="h-16 w-auto object-contain" />
+      </ng-container>
+  
+      <!-- Duplicate for Seamless Loop -->
+      <ng-container *ngFor="let logo of logos">
+        <img [src]="logo.src" [alt]="logo.name" class="h-16 w-auto object-contain" />
+      </ng-container>
+    </div>
+  </div>
+  

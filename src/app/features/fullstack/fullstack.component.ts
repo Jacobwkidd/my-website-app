@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CardComponent } from '../../shared/card/card.component';
 import { CommonModule } from '@angular/common';
+import { TabsComponent } from '../../shared/tabs/tabs.component';
 
 @Component({
   selector: 'app-fullstack',
   standalone: true,
-  imports: [CardComponent, CommonModule],
+  imports: [CardComponent, CommonModule, TabsComponent],
   templateUrl: './fullstack.component.html',
   styleUrls: ['./fullstack.component.css'],
 })
 export class FullstackComponent {
+  selectedLanguage = 'All';
   projects = [
     {
       title: 'Phone Store',
@@ -69,5 +71,20 @@ export class FullstackComponent {
 
   generateShortDescription(detailedDescription: string): string {
     return detailedDescription.split('.').slice(0, 1).join('.') + '...';
+  }
+
+
+  filteredProjects = [...this.projects]; // Show all projects initially
+
+  selectLanguage(language: string) {
+    this.selectedLanguage = language;
+
+    if (language === 'All') {
+      this.filteredProjects = [...this.projects];
+    } else {
+      this.filteredProjects = this.projects.filter(project => 
+        project.tags.includes(language)
+      );
+    }
   }
 }

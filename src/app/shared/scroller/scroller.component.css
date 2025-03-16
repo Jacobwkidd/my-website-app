@@ -1,0 +1,23 @@
+@keyframes scroll {
+    from {
+      transform: translateX(20%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .overflow-hidden {
+    width: 100%; /* Ensures it fits within the parent div */
+  }
+  
+  .animate-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+  
