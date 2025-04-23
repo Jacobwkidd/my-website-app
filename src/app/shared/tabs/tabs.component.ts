@@ -11,20 +11,16 @@ import { RouterModule } from '@angular/router';
 })
 export class TabsComponent implements AfterViewInit {
   @ViewChild('scrollContainer', { static: false }) scrollContainer!: ElementRef;
-  @Output() selectedLanguageChange = new EventEmitter<string>(); // ✅ Corrected EventEmitter
+  @Output() selectedLanguageChange = new EventEmitter<string>(); 
 
   
   languages = [
     { name: 'All' },
     { name: 'JavaScript' },
     { name: 'TypeScript' },
-    { name: 'Python' },
     { name: 'C#' },
-    { name: 'Java' },
-    { name: 'PHP' },
     { name: 'Angular' },
     { name: 'React' },
-    { name: 'Vue.js' },
     { name: 'SQL' }
   ];
 
