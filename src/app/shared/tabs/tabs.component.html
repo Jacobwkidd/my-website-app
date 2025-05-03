@@ -1,23 +1,25 @@
-<div class="relative bg-[#0F172A] p-4 h-20 rounded-lg shadow-md">
-    <div 
-      #scrollContainer
-      class="flex space-x-4 overflow-x-auto no-scrollbar items-center cursor-grab active:cursor-grabbing px-4"
-      (mousedown)="startDrag($event)"
-      (mousemove)="onDrag($event)"
-      (mouseup)="stopDrag()"
-      (mouseleave)="stopDrag()"
-      (scroll)="checkScroll()">
-      
-      <button 
-        *ngFor="let lang of languages" 
-        (click)="selectLanguage(lang.name)"
-        class="px-5 py-2 text-sm font-semibold rounded-full transition-all duration-300 ease-in-out border border-gray-500 
-               text-white focus:ring-2 focus:ring-blue-400 transform"
-        [ngClass]="{
-          'bg-gradient-to-r from-purple-400 to-blue-500 text-black shadow-lg': lang.name === selectedLanguage,
-          'bg-[#0F172A] hover:bg-gray-700': lang.name !== selectedLanguage
-        }">
-        {{ lang.name }}
-      </button>
-    </div>
+<div class="relative bg-[#0F172A] h-20 rounded-lg shadow-md p-0">
+  <div 
+    #scrollContainer
+    class="h-full flex items-center space-x-4 overflow-x-auto no-scrollbar px-4 cursor-grab active:cursor-grabbing"
+    (mousedown)="startDrag($event)"
+    (mousemove)="onDrag($event)"
+    (mouseup)="stopDrag()"
+    (mouseleave)="stopDrag()"
+    (scroll)="checkScroll()"
+  >
+    <button 
+      *ngFor="let lang of languages" 
+      (click)="selectLanguage(lang.name)"
+      class="min-h-[2.5rem] px-5 py-2 text-sm font-semibold rounded-full transition-all duration-300 ease-in-out border border-gray-500 
+             text-white focus:ring-2 focus:ring-blue-400 transform whitespace-nowrap"
+      [ngClass]="{
+        'bg-gradient-to-r from-purple-400 to-blue-500 text-black shadow-lg': lang.name === selectedLanguage,
+        'bg-[#0F172A] hover:bg-gray-700': lang.name !== selectedLanguage
+      }"
+    >
+      {{ lang.name }}
+    </button>
+  </div>
 </div>
+

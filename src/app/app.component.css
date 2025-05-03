@@ -14,4 +14,36 @@ body {
     flex-direction: column;
     min-height: 100vh;
   }
-  
+/* Target global scrollbars */
+/* Target scrollbar inside app-root */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Scrollbar Styling */
+app-root::-webkit-scrollbar {
+  width: 8px;
+}
+
+app-root::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 9999px;
+}
+
+app-root::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+  border-radius: 9999px;
+}
+
+app-root::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #3b82f6);
+}
+
+/* Firefox support */
+app-root {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #0f172a;
+}
+

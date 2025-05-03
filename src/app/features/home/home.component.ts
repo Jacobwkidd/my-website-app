@@ -5,6 +5,6 @@ import { ScrollerComponent } from '../../shared/scroller/scroller.component'; //
   selector: 'app-home',
   templateUrl: './home.component.html',
   standalone: true, // ✅ Ensure home component is standalone
-  imports: [ScrollerComponent] // ✅ Import the scroller component here
+  imports: [] // ✅ Import the scroller component here
 })
 export class HomeComponent {}
